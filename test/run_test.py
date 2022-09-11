@@ -281,7 +281,9 @@ CI_SERIAL_LIST = [
     'test_sparse_csr',
     'test_dispatch',
     'nn/test_pooling',
-    'distributions/test_distributions'
+    'distributions/test_distributions',
+    'test_autograd',  # slow gradcheck runs a test that checks the cuda memory allocator
+    'test_prims',  # slow gradcheck runs a test that checks the cuda memory allocator
 ]
 
 # A subset of our TEST list that validates PyTorch's ops, modules, and autograd function as expected
