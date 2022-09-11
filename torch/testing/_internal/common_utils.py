@@ -642,7 +642,7 @@ def lint_test_case_extension(suite):
 
 
 def get_report_path(pytest=False):
-    test_filename = inspect.getfile(sys._getframe(1))
+    test_filename = inspect.getfile(sys._getframe(2))
     test_filename = sanitize_if_functorch_test_filename(test_filename)
     test_filename = sanitize_test_filename(test_filename)
     test_report_path = TEST_SAVE_XML + LOG_SUFFIX
